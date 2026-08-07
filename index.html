@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
     <link rel="icon" href="./favicon.ico?v=2" sizes="any">
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=2">
@@ -23,6 +26,12 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
+    <!-- Preconectar al CDN para evitar cuellos de botella -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+    <!-- Script de Tailwind original -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -178,7 +187,7 @@
         <!-- DESKTOP LEFT PANE (CafePrensaFrancesa.jpg) -->
         <!-- ========================================== -->
         <div class="pane-left">
-            <img src="ImgMenu/HomeIzquierdo.png"
+            <img src="/ImgMenu/HomeIzquierdo.png"
                 onerror="this.src='https://placehold.co/1200x1600/34383B/C85A2C?text=Raices+Cafe'" alt="Ambiance"
                 class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/95 via-brand-charcoal/40 to-transparent">
@@ -190,18 +199,33 @@
                         <use href="#logo-icon" />
                     </svg>
                 </div>
-                <h1 id="desktop-slogan" class="font-serif text-4xl xl:text-5xl font-bold mb-4 leading-tight">El origen de tu inspiración.</h1>
-                <p id="desktop-desc" class="text-brand-cream/80 text-lg max-w-md leading-relaxed mb-8">Café de especialidad, comida artesanal y espacios diseñados para crear, conectar y disfrutar.</p>
-                
+                <h1 id="desktop-slogan" class="font-serif text-4xl xl:text-5xl font-bold mb-4 leading-tight">El origen
+                    de tu inspiración.</h1>
+                <p id="desktop-desc" class="text-brand-cream/80 text-lg max-w-md leading-relaxed mb-8">Café de
+                    especialidad, comida artesanal y espacios diseñados para crear, conectar y disfrutar.</p>
+
                 <!-- Socials Desktop (Always visible) -->
                 <div class="border-t border-brand-cream/20 pt-6">
-                    <span class="text-xs font-bold text-brand-cream/50 uppercase tracking-widest mb-3 block" id="txt-desktop-socials">Síguenos</span>
+                    <span class="text-xs font-bold text-brand-cream/50 uppercase tracking-widest mb-3 block"
+                        id="txt-desktop-socials">Síguenos</span>
                     <div class="flex items-center gap-4">
-                        <a href="#" target="_blank" class="text-brand-cream hover:text-brand-terracotta transition-colors" aria-label="Instagram">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                        <a href="#" target="_blank"
+                            class="text-brand-cream hover:text-brand-terracotta transition-colors"
+                            aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd" />
+                            </svg>
                         </a>
-                        <a href="#" target="_blank" class="text-brand-cream hover:text-brand-terracotta transition-colors" aria-label="Facebook">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        <a href="#" target="_blank"
+                            class="text-brand-cream hover:text-brand-terracotta transition-colors"
+                            aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -225,11 +249,11 @@
 
             <!-- VIEW 1: HOMEPAGE (BENTO GRID DESIGN) -->
             <div id="view-home" class="view-section active custom-scroll pb-12 overflow-x-hidden">
-                
+
                 <!-- Mobile Hero (Hidden on Desktop) -->
                 <div class="relative w-full h-[50vh] lg:hidden shrink-0 mb-8">
                     <!-- Mobile Left Image matches Desktop Cafe Image -->
-                    <img src="ImgMenu/CafeCafeteraItaliana.png"
+                    <img src="./ImgMenu/CafeCafeteraItaliana.png"
                         onerror="this.src='https://placehold.co/800x1200/34383B/C85A2C?text=Raices+Cafe'"
                         class="w-full h-full object-cover rounded-b-[40px] shadow-lg">
                     <div
@@ -248,92 +272,150 @@
                 </div>
 
                 <!-- Desktop Bento Layout -->
-                <div class="flex-1 w-full max-w-6xl mx-auto px-6 py-6 lg:py-16 xl:px-16 flex flex-col justify-center relative z-10">
-                    
+                <div
+                    class="flex-1 w-full max-w-6xl mx-auto px-6 py-6 lg:py-16 xl:px-16 flex flex-col justify-center relative z-10">
+
                     <!-- Welcome Header -->
                     <div class="mb-8 lg:mb-12">
-                        <span class="text-brand-terracotta font-bold tracking-widest text-xs lg:text-sm uppercase mb-3 block" id="txt-home-eyebrow">Explora Raíces</span>
-                        <h2 class="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-charcoal mb-4 tracking-tight" id="desktop-welcome">Bienvenido</h2>
-                        <p class="text-brand-charcoal/60 text-lg lg:text-xl max-w-2xl leading-relaxed" id="txt-home-desc">Selecciona una opción para comenzar tu experiencia.</p>
+                        <span
+                            class="text-brand-terracotta font-bold tracking-widest text-xs lg:text-sm uppercase mb-3 block"
+                            id="txt-home-eyebrow">Explora Raíces</span>
+                        <h2 class="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-charcoal mb-4 tracking-tight"
+                            id="desktop-welcome">Bienvenido</h2>
+                        <p class="text-brand-charcoal/60 text-lg lg:text-xl max-w-2xl leading-relaxed"
+                            id="txt-home-desc">Selecciona una opción para comenzar tu experiencia.</p>
                     </div>
 
                     <!-- PERFECT BENTO GRID (AWWWARDS LEVEL) -->
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 lg:auto-rows-[220px]">
-                        
+
                         <!-- BENTO 1: MENU (HamburguesaEspecial.jpg) -->
-                        <button onclick="navigate('menu')" class="group relative overflow-hidden bg-brand-charcoal rounded-[32px] lg:col-span-6 lg:row-span-2 h-[280px] lg:h-full shadow-sm hover:shadow-2xl transition-all duration-500 text-left">
-                            <img src="ImgMenu/HamburguesaEspecial.png" onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80'" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                            
+                        <button onclick="navigate('menu')"
+                            class="group relative overflow-hidden bg-brand-charcoal rounded-[32px] lg:col-span-6 lg:row-span-2 h-[280px] lg:h-full shadow-sm hover:shadow-2xl transition-all duration-500 text-left">
+                            <img src="./ImgMenu/HamburguesaEspecial.png"
+                                onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80'"
+                                class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                            </div>
+
                             <div class="absolute bottom-0 left-0 p-8 lg:p-10 w-full flex items-end justify-between">
                                 <div>
-                                    <span class="text-brand-terracotta font-bold tracking-widest text-xs uppercase mb-2 block drop-shadow-md" id="txt-sub-menu">Nuestra Carta</span>
-                                    <h3 class="font-serif text-4xl lg:text-5xl text-brand-cream font-bold drop-shadow-md" id="txt-btn-menu">Ver el Menú</h3>
+                                    <span
+                                        class="text-brand-terracotta font-bold tracking-widest text-xs uppercase mb-2 block drop-shadow-md"
+                                        id="txt-sub-menu">Nuestra Carta</span>
+                                    <h3 class="font-serif text-4xl lg:text-5xl text-brand-cream font-bold drop-shadow-md"
+                                        id="txt-btn-menu">Ver el Menú</h3>
                                 </div>
-                                <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-brand-terracotta/90 backdrop-blur flex items-center justify-center text-white group-hover:bg-brand-terracotta group-hover:scale-110 transition-all duration-300 shadow-lg shrink-0">
-                                    <svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                <div
+                                    class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-brand-terracotta/90 backdrop-blur flex items-center justify-center text-white group-hover:bg-brand-terracotta group-hover:scale-110 transition-all duration-300 shadow-lg shrink-0">
+                                    <svg class="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
                                 </div>
                             </div>
                         </button>
 
                         <!-- BENTO 2: COWORKING -->
-                        <button onclick="navigate('coworking')" class="lg:col-span-3 bg-white p-6 lg:p-8 rounded-[32px] flex flex-col justify-between border border-brand-charcoal/5 hover:border-brand-terracotta/30 hover:shadow-xl transition-all duration-300 group text-left h-[180px] lg:h-full">
-                            <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-terracotta group-hover:scale-110 group-hover:bg-brand-terracotta group-hover:text-white transition-all duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <button onclick="navigate('coworking')"
+                            class="lg:col-span-3 bg-white p-6 lg:p-8 rounded-[32px] flex flex-col justify-between border border-brand-charcoal/5 hover:border-brand-terracotta/30 hover:shadow-xl transition-all duration-300 group text-left h-[180px] lg:h-full">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-terracotta group-hover:scale-110 group-hover:bg-brand-terracotta group-hover:text-white transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-xl lg:text-2xl text-brand-charcoal group-hover:text-brand-terracotta transition-colors" id="txt-btn-coworking">Coworking</h3>
+                                <h3 class="font-bold text-xl lg:text-2xl text-brand-charcoal group-hover:text-brand-terracotta transition-colors"
+                                    id="txt-btn-coworking">Coworking</h3>
                                 <p class="text-brand-charcoal/50 text-sm mt-1" id="txt-sub-cw">Zonas de estudio</p>
                             </div>
                         </button>
 
                         <!-- BENTO 3: UBICACION -->
-                        <button onclick="navigate('location')" class="lg:col-span-3 bg-white p-6 lg:p-8 rounded-[32px] flex flex-col justify-between border border-brand-charcoal/5 hover:border-brand-terracotta/30 hover:shadow-xl transition-all duration-300 group text-left h-[180px] lg:h-full">
-                            <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-terracotta group-hover:scale-110 group-hover:bg-brand-terracotta group-hover:text-white transition-all duration-300">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <button onclick="navigate('location')"
+                            class="lg:col-span-3 bg-white p-6 lg:p-8 rounded-[32px] flex flex-col justify-between border border-brand-charcoal/5 hover:border-brand-terracotta/30 hover:shadow-xl transition-all duration-300 group text-left h-[180px] lg:h-full">
+                            <div
+                                class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-terracotta group-hover:scale-110 group-hover:bg-brand-terracotta group-hover:text-white transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-xl lg:text-2xl text-brand-charcoal group-hover:text-brand-terracotta transition-colors" id="txt-btn-location">Ubicación</h3>
+                                <h3 class="font-bold text-xl lg:text-2xl text-brand-charcoal group-hover:text-brand-terracotta transition-colors"
+                                    id="txt-btn-location">Ubicación</h3>
                                 <p class="text-brand-charcoal/50 text-sm mt-1" id="txt-sub-loc">Cómo llegar</p>
                             </div>
                         </button>
 
                         <!-- BENTO 4: CONTACTO -->
-                        <button onclick="navigate('contact')" class="lg:col-span-6 bg-brand-charcoal text-white p-6 lg:p-8 rounded-[32px] flex items-center justify-between shadow-md hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 group text-left h-auto lg:h-full border border-white/5">
+                        <button onclick="navigate('contact')"
+                            class="lg:col-span-6 bg-brand-charcoal text-white p-6 lg:p-8 rounded-[32px] flex items-center justify-between shadow-md hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 group text-left h-auto lg:h-full border border-white/5">
                             <div>
-                                <span class="text-white/60 font-bold tracking-widest text-xs lg:text-sm uppercase mb-1 lg:mb-2 block" id="txt-sub-contact">Atención</span>
-                                <h3 class="font-bold text-xl lg:text-3xl leading-tight text-brand-cream" id="txt-btn-contact">Contáctanos y Reservas</h3>
+                                <span
+                                    class="text-white/60 font-bold tracking-widest text-xs lg:text-sm uppercase mb-1 lg:mb-2 block"
+                                    id="txt-sub-contact">Atención</span>
+                                <h3 class="font-bold text-xl lg:text-3xl leading-tight text-brand-cream"
+                                    id="txt-btn-contact">Contáctanos y Reservas</h3>
                             </div>
-                            <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
-                                <svg class="w-6 h-6 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                            <div
+                                class="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366] shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-all duration-300">
+                                <svg class="w-6 h-6 lg:w-8 lg:h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                                </svg>
                             </div>
                         </button>
                     </div>
 
                 </div>
-                
+
                 <!-- Socials Mobile Footer (Hidden on desktop) -->
                 <div class="lg:hidden w-full pb-8 pt-4 flex justify-center gap-8 text-brand-charcoal/30">
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg></a>
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg></a>
                 </div>
             </div>
 
             <!-- VIEW 2: MENU SYSTEM -->
             <div id="view-menu" class="view-section custom-scroll">
 
-                <div class="sticky top-0 z-20 bg-brand-cream/95 backdrop-blur-md pt-8 lg:pt-12 pb-4 px-6 lg:px-12 shadow-[0_10px_30px_rgba(244,239,227,1)]">
+                <div
+                    class="sticky top-0 z-20 bg-brand-cream/95 backdrop-blur-md pt-8 lg:pt-12 pb-4 px-6 lg:px-12 shadow-[0_10px_30px_rgba(244,239,227,1)]">
                     <div class="flex items-center mb-6 max-w-7xl mx-auto w-full pr-28 sm:pr-32">
-                        <button onclick="navigate('home')" class="w-10 h-10 shrink-0 mr-4 flex items-center justify-center text-brand-charcoal bg-white rounded-full shadow-sm hover:scale-105 transition-transform border border-brand-charcoal/5">
+                        <button onclick="navigate('home')"
+                            class="w-10 h-10 shrink-0 mr-4 flex items-center justify-center text-brand-charcoal bg-white rounded-full shadow-sm hover:scale-105 transition-transform border border-brand-charcoal/5">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                             </svg>
                         </button>
-                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-charcoal mr-auto" id="txt-menu-title">Menú</h2>
-                        <svg class="w-24 sm:w-32 h-auto text-brand-charcoal shrink-0 drop-shadow-sm"><use href="#logo-icon" /></svg>
+                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-charcoal mr-auto"
+                            id="txt-menu-title">Menú</h2>
+                        <svg class="w-24 sm:w-32 h-auto text-brand-charcoal shrink-0 drop-shadow-sm">
+                            <use href="#logo-icon" />
+                        </svg>
                     </div>
 
-                    <div class="flex overflow-x-auto no-scrollbar gap-3 pb-2 snap-x snap-mandatory max-w-7xl mx-auto w-full" id="category-tabs">
+                    <div class="flex overflow-x-auto no-scrollbar gap-3 pb-2 snap-x snap-mandatory max-w-7xl mx-auto w-full"
+                        id="category-tabs">
                         <!-- JS Injected -->
                     </div>
                 </div>
@@ -349,89 +431,171 @@
             <div id="view-coworking" class="view-section custom-scroll">
 
                 <div class="relative w-full h-64 lg:h-80 shrink-0">
-                    <img src="ImgMenu/Coworking.png"
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
                         onerror="this.src='https://placehold.co/1200x800/F4EFE3/34383B?text=Coworking'"
                         class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-brand-charcoal/40"></div>
-                    <button onclick="navigate('home')" class="absolute top-8 left-6 w-10 h-10 flex items-center justify-center text-brand-charcoal bg-white/90 backdrop-blur rounded-full shadow-sm hover:scale-105 transition-transform">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <button onclick="navigate('home')"
+                        class="absolute top-8 left-6 w-10 h-10 flex items-center justify-center text-brand-charcoal bg-white/90 backdrop-blur rounded-full shadow-sm hover:scale-105 transition-transform">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
                     </button>
                     <div class="absolute bottom-6 right-6">
-                        <svg class="w-32 sm:w-40 h-auto text-brand-cream logo-glow"><use href="#logo-icon" /></svg>
+                        <svg class="w-32 sm:w-40 h-auto text-brand-cream logo-glow">
+                            <use href="#logo-icon" />
+                        </svg>
                     </div>
                 </div>
 
                 <div class="px-6 py-10 lg:py-16 flex-1 flex flex-col items-center">
                     <div class="max-w-2xl w-full">
-                        <h2 class="font-serif font-bold text-3xl lg:text-5xl mb-4 text-brand-charcoal leading-tight" id="cw-title">Zona de Estudio y Trabajo</h2>
-                        <p class="text-brand-charcoal/80 text-lg mb-10 leading-relaxed font-normal" id="cw-desc">Hemos creado un ambiente cómodo para trabajar en tus proyectos, asistir a clases, o simplemente disfrutar de un momento de concentración.</p>
+                        <h2 class="font-serif font-bold text-3xl lg:text-5xl mb-4 text-brand-charcoal leading-tight"
+                            id="cw-title">Zona de Estudio y Trabajo</h2>
+                        <p class="text-brand-charcoal/80 text-lg mb-10 leading-relaxed font-normal" id="cw-desc">Hemos
+                            creado un ambiente cómodo para trabajar en tus proyectos, asistir a clases, o simplemente
+                            disfrutar de un momento de concentración.</p>
 
                         <div class="bg-white rounded-3xl p-6 lg:p-10 shadow-sm border border-brand-charcoal/5 mb-8">
-                            <h3 class="font-bold text-brand-terracotta mb-6 uppercase tracking-wider text-sm" id="cw-amenities-title">¿Qué ofrecemos?</h3>
+                            <h3 class="font-bold text-brand-terracotta mb-6 uppercase tracking-wider text-sm"
+                                id="cw-amenities-title">¿Qué ofrecemos?</h3>
                             <ul class="space-y-4" id="cw-amenities-list">
-                                <li class="flex items-center gap-4"><div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span class="text-brand-charcoal/90 lg:text-lg" id="cw-am-1">Internet Wi-Fi de alta velocidad</span></li>
-                                <li class="flex items-center gap-4"><div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span class="text-brand-charcoal/90 lg:text-lg" id="cw-am-2">Tomas de corriente accesibles</span></li>
-                                <li class="flex items-center gap-4"><div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span class="text-brand-charcoal/90 lg:text-lg" id="cw-am-3">Ambiente tranquilo y cómodo</span></li>
-                                <li class="flex items-center gap-4"><div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span class="text-brand-charcoal/90 lg:text-lg" id="cw-am-4">Café artesanal preparado al momento</span></li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span
+                                        class="text-brand-charcoal/90 lg:text-lg" id="cw-am-1">Internet Wi-Fi de alta
+                                        velocidad</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span
+                                        class="text-brand-charcoal/90 lg:text-lg" id="cw-am-2">Tomas de corriente
+                                        accesibles</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span
+                                        class="text-brand-charcoal/90 lg:text-lg" id="cw-am-3">Ambiente tranquilo y
+                                        cómodo</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-brand-terracotta shrink-0"></div><span
+                                        class="text-brand-charcoal/90 lg:text-lg" id="cw-am-4">Café artesanal preparado
+                                        al momento</span>
+                                </li>
                             </ul>
                         </div>
 
                         <!-- Legal & Rules Section -->
                         <div class="bg-brand-cream p-6 lg:p-8 rounded-3xl border border-brand-terracotta/20 mb-8">
-                            <h3 class="font-bold text-brand-charcoal text-xl mb-6" id="cw-rules-title">Normas del Espacio</h3>
+                            <h3 class="font-bold text-brand-charcoal text-xl mb-6" id="cw-rules-title">Normas del
+                                Espacio</h3>
                             <ul class="space-y-4">
                                 <li class="flex gap-3 items-start">
-                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-1">Para ayudarnos a mantener este espacio disponible para todos, sugerimos un consumo mínimo de COP 5,000.</span>
+                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-1">Para
+                                        ayudarnos a mantener este espacio disponible para todos, sugerimos un consumo
+                                        mínimo de COP 5,000.</span>
                                 </li>
                                 <li class="flex gap-3 items-start">
-                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-2">Si planeas quedarte más de 3 horas, te pedimos amablemente realizar una compra adicional.</span>
+                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-2">Si
+                                        planeas quedarte más de 3 horas, te pedimos amablemente realizar una compra
+                                        adicional.</span>
                                 </li>
                                 <li class="flex gap-3 items-start">
-                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-3">Cuida tus objetos personales. El establecimiento no se hace responsable por pérdida o robo de pertenencias.</span>
+                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                        </path>
+                                    </svg>
+                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-3">Cuida
+                                        tus objetos personales. El establecimiento no se hace responsable por pérdida o
+                                        robo de pertenencias.</span>
                                 </li>
                                 <li class="flex gap-3 items-start">
-                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-4">Para proteger tus equipos, recomendamos usar supresores de picos. No nos hacemos responsables por daños generados por fallas eléctricas.</span>
+                                    <svg class="w-5 h-5 text-brand-terracotta shrink-0 mt-0.5" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    <span class="text-brand-charcoal/80 text-sm leading-relaxed" id="cw-rules-4">Para
+                                        proteger tus equipos, recomendamos usar supresores de picos. No nos hacemos
+                                        responsables por daños generados por fallas eléctricas.</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Socials Mobile Footer -->
                 <div class="lg:hidden w-full pb-8 pt-4 flex justify-center gap-8 text-brand-charcoal/30">
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg></a>
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg></a>
                 </div>
             </div>
 
             <!-- VIEW 4: LOCATION -->
             <div id="view-location" class="view-section custom-scroll">
-                <div class="sticky top-0 z-20 bg-brand-cream/95 backdrop-blur-md pt-8 lg:pt-12 pb-4 px-6 lg:px-12 shadow-[0_10px_30px_rgba(244,239,227,1)]">
+                <div
+                    class="sticky top-0 z-20 bg-brand-cream/95 backdrop-blur-md pt-8 lg:pt-12 pb-4 px-6 lg:px-12 shadow-[0_10px_30px_rgba(244,239,227,1)]">
                     <div class="flex items-center max-w-2xl mx-auto w-full pr-28 sm:pr-32">
-                        <button onclick="navigate('home')" class="w-10 h-10 shrink-0 mr-4 flex items-center justify-center text-brand-charcoal bg-white rounded-full shadow-sm hover:scale-105 transition-transform border border-brand-charcoal/5">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        <button onclick="navigate('home')"
+                            class="w-10 h-10 shrink-0 mr-4 flex items-center justify-center text-brand-charcoal bg-white rounded-full shadow-sm hover:scale-105 transition-transform border border-brand-charcoal/5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
                         </button>
-                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-charcoal mr-auto" id="loc-title">Ubicación</h2>
-                        <svg class="w-24 sm:w-32 h-auto text-brand-charcoal shrink-0 drop-shadow-sm"><use href="#logo-icon" /></svg>
+                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-charcoal mr-auto"
+                            id="loc-title">Ubicación</h2>
+                        <svg class="w-24 sm:w-32 h-auto text-brand-charcoal shrink-0 drop-shadow-sm">
+                            <use href="#logo-icon" />
+                        </svg>
                     </div>
                 </div>
 
                 <div class="px-6 pb-12 pt-6 flex-1 flex flex-col items-center">
                     <div class="max-w-2xl w-full flex flex-col gap-6">
                         <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-sm border border-brand-charcoal/5">
-                            <h3 class="font-bold text-brand-charcoal/50 uppercase tracking-wider text-xs mb-4" id="loc-address-label">Nuestra Dirección</h3>
-                            <p class="text-brand-charcoal font-medium text-lg lg:text-xl leading-relaxed mb-8" id="loc-address">Cra. 3c # 20-20<br>Barrio Villa Nueva, Mosquera, Cund.</p>
+                            <h3 class="font-bold text-brand-charcoal/50 uppercase tracking-wider text-xs mb-4"
+                                id="loc-address-label">Nuestra Dirección</h3>
+                            <p class="text-brand-charcoal font-medium text-lg lg:text-xl leading-relaxed mb-8"
+                                id="loc-address">Cra. 3c # 20-20<br>Barrio Villa Nueva, Mosquera, Cund.</p>
                             <div class="flex flex-col sm:flex-row gap-3">
-                                <a href="https://waze.com/ul?q=Cra.%203c%20%23%2020-20%2C%20Mosquera%2C%20Cundinamarca&navigate=yes" target="_blank" class="flex-1 bg-[#E8F3F9] text-[#05A4E8] py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#d8eaf5] transition-colors">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.6 6.3c-.6-1.5-1.9-2.6-3.4-3.1-2.9-1-6.1.4-7.5 3.1-1.3-1-3-.7-4.1.3-1.4 1.4-1.6 3.6-.5 5.2.1.2.2.4.3.6C3.9 14.1 3 16.4 3 18.9c0 .6.4 1.1 1 1.1h16c.6 0 1-.5 1-1.1 0-2.5-.9-4.8-2.4-6.5.1-.2.2-.4.3-.6 1.1-1.6.9-3.8-.5-5.2-.2-.2-.5-.3-.8-.3zM10.5 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" /></svg>
+                                <a href="https://waze.com/ul?q=Cra.%203c%20%23%2020-20%2C%20Mosquera%2C%20Cundinamarca&navigate=yes"
+                                    target="_blank"
+                                    class="flex-1 bg-[#E8F3F9] text-[#05A4E8] py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#d8eaf5] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20.6 6.3c-.6-1.5-1.9-2.6-3.4-3.1-2.9-1-6.1.4-7.5 3.1-1.3-1-3-.7-4.1.3-1.4 1.4-1.6 3.6-.5 5.2.1.2.2.4.3.6C3.9 14.1 3 16.4 3 18.9c0 .6.4 1.1 1 1.1h16c.6 0 1-.5 1-1.1 0-2.5-.9-4.8-2.4-6.5.1-.2.2-.4.3-.6 1.1-1.6.9-3.8-.5-5.2-.2-.2-.5-.3-.8-.3zM10.5 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                                    </svg>
                                     <span id="loc-waze-btn">Waze</span>
                                 </a>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Cra.+3c+%23+20-20,+Mosquera,+Cundinamarca" target="_blank" class="flex-1 bg-[#E8F5E9] text-[#2E7D32] py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#ccebce] transition-colors">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Cra.+3c+%23+20-20,+Mosquera,+Cundinamarca"
+                                    target="_blank"
+                                    class="flex-1 bg-[#E8F5E9] text-[#2E7D32] py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#ccebce] transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                    </svg>
                                     <span id="loc-map-btn">Google Maps</span>
                                 </a>
                             </div>
@@ -441,41 +605,67 @@
 
                 <!-- Socials Mobile Footer -->
                 <div class="lg:hidden w-full pb-8 pt-4 flex justify-center gap-8 text-brand-charcoal/30">
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg></a>
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg></a>
                 </div>
             </div>
 
             <!-- VIEW 5: CONTACT & RESERVATIONS -->
             <div id="view-contact" class="view-section custom-scroll">
-                <div class="sticky top-0 z-20 bg-brand-cream/95 backdrop-blur-md pt-8 lg:pt-12 pb-4 px-6 lg:px-12 shadow-[0_10px_30px_rgba(244,239,227,1)]">
+                <div
+                    class="sticky top-0 z-20 bg-brand-cream/95 backdrop-blur-md pt-8 lg:pt-12 pb-4 px-6 lg:px-12 shadow-[0_10px_30px_rgba(244,239,227,1)]">
                     <div class="flex items-center max-w-2xl mx-auto w-full pr-28 sm:pr-32">
-                        <button onclick="navigate('home')" class="w-10 h-10 shrink-0 mr-4 flex items-center justify-center text-brand-charcoal bg-white rounded-full shadow-sm hover:scale-105 transition-transform border border-brand-charcoal/5">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        <button onclick="navigate('home')"
+                            class="w-10 h-10 shrink-0 mr-4 flex items-center justify-center text-brand-charcoal bg-white rounded-full shadow-sm hover:scale-105 transition-transform border border-brand-charcoal/5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                            </svg>
                         </button>
-                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-charcoal mr-auto" id="contact-title">Contacto y Reservas</h2>
-                        <svg class="w-24 sm:w-32 h-auto text-brand-charcoal shrink-0 drop-shadow-sm"><use href="#logo-icon" /></svg>
+                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-charcoal mr-auto"
+                            id="contact-title">Contacto y Reservas</h2>
+                        <svg class="w-24 sm:w-32 h-auto text-brand-charcoal shrink-0 drop-shadow-sm">
+                            <use href="#logo-icon" />
+                        </svg>
                     </div>
                 </div>
 
                 <div class="px-6 pb-12 pt-6 flex-1 flex flex-col items-center">
                     <div class="max-w-2xl w-full flex flex-col gap-6">
                         <div class="bg-white p-6 lg:p-8 rounded-3xl shadow-sm border border-brand-charcoal/5">
-                            <h3 class="font-bold text-brand-charcoal/50 uppercase tracking-wider text-xs mb-4" id="contact-label-inner">Contáctanos</h3>
+                            <h3 class="font-bold text-brand-charcoal/50 uppercase tracking-wider text-xs mb-4"
+                                id="contact-label-inner">Contáctanos</h3>
                             <div class="flex flex-col gap-4">
-                                <a href="https://wa.me/573209817575" target="_blank" class="w-full bg-[#25D366] text-white py-4 px-4 sm:px-6 rounded-2xl font-bold text-base sm:text-lg flex flex-col sm:flex-row items-center justify-between hover:scale-[1.02] transition-transform shadow-md shadow-[#25D366]/20 gap-2">
+                                <a href="https://wa.me/573209817575" target="_blank"
+                                    class="w-full bg-[#25D366] text-white py-4 px-4 sm:px-6 rounded-2xl font-bold text-base sm:text-lg flex flex-col sm:flex-row items-center justify-between hover:scale-[1.02] transition-transform shadow-md shadow-[#25D366]/20 gap-2">
                                     <div class="flex items-center gap-2 sm:gap-3 min-w-0">
                                         <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
                                         </svg>
                                         <span id="txt-whatsapp-btn">WhatsApp</span>
                                     </div>
                                 </a>
-                                <a href="mailto:raices.comidaartesanal26@gmail.com" class="w-full bg-brand-cream text-brand-charcoal py-4 px-4 sm:px-6 rounded-2xl font-bold border-2 border-brand-charcoal/10 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 hover:bg-white transition-colors">
-                                    <svg class="w-6 h-6 text-brand-terracotta shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                <a href="mailto:raices.comidaartesanal26@gmail.com"
+                                    class="w-full bg-brand-cream text-brand-charcoal py-4 px-4 sm:px-6 rounded-2xl font-bold border-2 border-brand-charcoal/10 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 hover:bg-white transition-colors">
+                                    <svg class="w-6 h-6 text-brand-terracotta shrink-0" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
                                     </svg>
-                                    <span class="break-all text-sm sm:text-base text-center sm:text-left">raices.comidaartesanal26@gmail.com</span>
+                                    <span
+                                        class="break-all text-sm sm:text-base text-center sm:text-left">raices.comidaartesanal26@gmail.com</span>
                                 </a>
                             </div>
                         </div>
@@ -484,8 +674,18 @@
 
                 <!-- Socials Mobile Footer -->
                 <div class="lg:hidden w-full pb-8 pt-4 flex justify-center gap-8 text-brand-charcoal/30">
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg></a>
-                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg></a>
+                    <a href="#" class="hover:text-brand-terracotta transition-colors"><svg class="w-6 h-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg></a>
                 </div>
             </div>
 
@@ -496,7 +696,7 @@
         <!-- ========================================== -->
         <div id="item-modal"
             class="fixed inset-0 z-[100] hidden flex items-center justify-center pointer-events-none p-0 sm:p-4 lg:p-6">
-            
+
             <div class="absolute inset-0 bg-brand-charcoal/80 backdrop-blur-sm opacity-0 pointer-events-auto transition-opacity duration-300"
                 id="modal-backdrop" onclick="closeModal()"></div>
 
@@ -519,16 +719,22 @@
                 </div>
 
                 <!-- Content Side -->
-                <div class="w-full lg:w-1/2 flex flex-col p-6 sm:p-8 lg:p-12 bg-white overflow-y-auto custom-scroll lg:overflow-hidden h-full">
+                <div
+                    class="w-full lg:w-1/2 flex flex-col p-6 sm:p-8 lg:p-12 bg-white overflow-y-auto custom-scroll lg:overflow-hidden h-full">
                     <div class="flex-1 flex flex-col justify-center">
-                        <h3 id="modal-title" class="font-serif font-bold text-2xl sm:text-3xl lg:text-4xl text-brand-charcoal mb-4 leading-tight lg:pr-8">
+                        <h3 id="modal-title"
+                            class="font-serif font-bold text-2xl sm:text-3xl lg:text-4xl text-brand-charcoal mb-4 leading-tight lg:pr-8">
                         </h3>
-                        <p id="modal-desc" class="text-brand-charcoal/80 text-sm sm:text-base lg:text-lg leading-relaxed font-normal"></p>
+                        <p id="modal-desc"
+                            class="text-brand-charcoal/80 text-sm sm:text-base lg:text-lg leading-relaxed font-normal">
+                        </p>
                     </div>
 
-                    <div class="mt-8 lg:mt-auto pt-6 border-t border-brand-charcoal/10 flex items-center justify-between shrink-0">
+                    <div
+                        class="mt-8 lg:mt-auto pt-6 border-t border-brand-charcoal/10 flex items-center justify-between shrink-0">
                         <span class="text-xs font-bold text-brand-charcoal/40 uppercase tracking-widest">Total</span>
-                        <span id="modal-price" class="inline-block font-bold text-white bg-brand-terracotta px-6 py-3 rounded-2xl text-lg shadow-lg shadow-brand-terracotta/30"></span>
+                        <span id="modal-price"
+                            class="inline-block font-bold text-white bg-brand-terracotta px-6 py-3 rounded-2xl text-lg shadow-lg shadow-brand-terracotta/30"></span>
                     </div>
                 </div>
             </div>
@@ -545,164 +751,144 @@
             ],
             items: [
                 {
-                    id: 1, category: 'food', price: 'COP 13,000', img: 'ImgMenu/HamburguesaTradicional.png',
+                    id: 1, category: 'food', price: 'COP 13,000', img: './ImgMenu/HamburguesaTradicional.png',
                     es: { name: 'Hamburguesa Tradicional', desc: 'Hamburguesa de 125g (res y cerdo), asada a la perfección, con queso mozzarella, lechuga, tomate, cebolla y salsas de la casa.' },
                     en: { name: 'Traditional Burger', desc: '125g burger made with a premium blend of 100% beef and pork, grilled to perfection, topped with mozzarella cheese, lettuce, tomato, onion, and house sauces.' }
                 },
-                 {
-                    id: 11, category: 'food', price: 'COP 20,000', img: 'ImgMenu/HamburguesaDobleTradicional.png',
-                    es: { name: 'Hamburguesa Doble Tradicional', desc: 'Hamburguesa con dos carnes de 125 g asadas ​​a la perfección, con queso mozzarella, lechuga, tomate, cebolla y salsas de la casa.' },
-                    en: { name: 'Special Bacon Burger', desc: 'Burger with two 125g patties grilled to perfection, featuring mozzarella cheese, lettuce, tomato, onion, and house sauces.' }
-                },
                 {
-                    id: 2, category: 'food', price: 'COP 18,000', img: 'ImgMenu/HamburguesaEspecial.png',
+                    id: 2, category: 'food', price: 'COP 17,000', img: './ImgMenu/HamburguesaEspecial.png',
                     es: { name: 'Hamburguesa Especial Tocineta', desc: 'Hamburguesa de 125g, tocineta crujiente, queso mozzarella, papa ripio, vegetales frescos y salsas de la casa.' },
                     en: { name: 'Special Bacon Burger', desc: '125g burger topped with crispy bacon, mozzarella cheese, shoestring potatoes, lettuce, tomato, onion, and house sauces.' }
                 },
                 {
-                    id: 12, category: 'food', price: 'COP 24,000', img: 'ImgMenu/HamburguesaDobleEspecial.png',
-                    es: { name: 'Hamburguesa de Doble Especialidad', desc: 'Hamburguesa con doble carne de 125g, tocineta crujiente, queso mozzarella, papa ripio, vegetales frescos y salsas de la casa.' },
-                    en: { name: 'Special Bacon Burger', desc: 'Burger with two 125g patties, crispy bacon, mozzarella cheese, shoestring potatoes, fresh vegetables, and house sauces.' }
-                },
-                {
-                    id: 3, category: 'food', price: 'COP 8,000', img: 'ImgMenu/Perro Sencillo.png',
+                    id: 3, category: 'food', price: 'COP 8,000', img: './ImgMenu/Choriperro.png',
                     es: { name: 'Perro Tradicional', desc: 'Salchicha clásica de 115g, cebolla picada, papa ripio, queso mozzarella fundido y salsas exclusivas.' },
                     en: { name: 'Traditional Hot Dog', desc: 'Classic 115g sausage served with chopped onions, crispy potato sticks, melted mozzarella, and house sauces.' }
                 },
                 {
-                    id: 4, category: 'food', price: 'COP 12,000', img: 'ImgMenu/Perro Especial.png',
+                    id: 4, category: 'food', price: 'COP 12,000', img: './ImgMenu/Perro Especial.png',
                     es: { name: 'Perro Especial Tocineta', desc: 'Salchicha clásica de 125g, tocineta ahumada crujiente, cebolla, papa ripio, queso mozzarella fundido y salsas exclusivas.' },
                     en: { name: 'Special Bacon Hot Dog', desc: 'Classic 125g sausage topped with crispy smoked bacon, chopped onions, potato sticks, melted mozzarella, and house sauces.' }
                 },
-                 {
-                    id: 5, category: 'food', price: 'COP 10,000', img: 'ImgMenu/Choriperro.png',
-                    es: { name: 'Choriperro', desc: 'Chorizo español de 90g, cebolla, papa ripio, queso mozzarella fundido y salsas exclusivas.' },
-                    en: { name: 'Special Bacon Hot Dog', desc: '90g Spanish chorizo, onion, shoestring potatoes, melted mozzarella cheese, and signature sauces.' }
-                },
                 {
-                    id: 6, category: 'food', price: 'COP 12,000', img: 'ImgMenu/SalchipapaSencilla.png',
-                    es: { name: 'Salchipapa Sencilla', desc: 'Base de papas a la francesa, salchicha americana seleccionada, queso mozzarella fundido.' },
-                    en: { name: 'American Special Salchipapa', desc: 'French fry base, select American-style sausage, melted mozzarella cheese.' }
-                },
-                {
-                    id: 7, category: 'food', price: 'COP 16,000', img: 'ImgMenu/Salchipapa.png',
+                    id: 6, category: 'food', price: 'COP 15,000', img: './ImgMenu/Salchipapa.png',
                     es: { name: 'Salchipapa Especial', desc: 'Base de papas a la francesa, salchicha americana seleccionada, lechuga, queso mozzarella fundido y tiras de jamón.' },
                     en: { name: 'American Special Salchipapa', desc: 'Crispy French fries topped with American-style sausage, lettuce, melted mozzarella cheese, and thin strips of ham.' }
                 },
                 {
-                    id: 8, category: 'food', price: 'COP 3,500', img: 'ImgMenu/EmpanadaCarnePapa.png',
+                    id: 7, category: 'food', price: 'COP 3,500', img: './ImgMenu/EmpanadaCarnePapa.png',
                     es: { name: 'Empanada de Carne y Papa', desc: 'Tradicional empanada de maíz rellena de carne sazonada y papa.' },
                     en: { name: 'Beef & Potato Empanada', desc: 'Traditional cornmeal empanada filled with seasoned beef and potatoes.' }
                 },
                 {
-                    id: 9, category: 'food', price: 'COP 3,500', img: 'ImgMenu/EmpanadaPollo.png',
+                    id: 8, category: 'food', price: 'COP 3,500', img: './ImgMenu/EmpanadaPollo.png',
                     es: { name: 'Empanada de Pollo', desc: 'Tradicional empanada de maíz rellena de Pollo.' },
                     en: { name: 'Chicken Empanada', desc: 'Traditional cornmeal empanada filled with seasoned chicken.' }
                 },
                 {
-                    id: 10, category: 'coffee', price: 'COP 3,500', img: 'ImgMenu/CafePrensaFrancesa.png',
+                    id: 10, category: 'coffee', price: 'COP 3,500', img: './ImgMenu/CafePrensaFrancesa.png',
                     es: { name: 'Café de Origen - Prensa Francesa', desc: 'Método de inmersión total que resalta los aceites naturales y notas afrutadas de nuestro café de especialidad. Ofrece una taza con gran cuerpo y un sabor intenso y sedoso.' },
                     en: { name: 'Single Origin - French Press', desc: 'Full-immersion brewing method that highlights the natural oils and fruity notes of our specialty coffee. It yields a full-bodied cup with a rich, silky flavor.' }
                 },
                 {
-                    id: 1001, category: 'coffee', price: 'COP 3,500', img: 'ImgMenu/CafeCafeteraItaliana.png',
+                    id: 1001, category: 'coffee', price: 'COP 3,500', img: './ImgMenu/CafeCafeteraItaliana.png',
                     es: { name: 'Café de Origen - Moka Italiana', desc: 'Clásico método italiano accionado por presión de vapor. Produce un café robusto, muy concentrado y aromático, acercándose a la fuerza e intensidad de un espresso tradicional.' },
                     en: { name: 'Single Origin - Moka Pot', desc: 'Classic Italian method driven by steam pressure. It produces a robust, highly concentrated, and aromatic coffee, closely resembling the strength and intensity of a traditional espresso.' }
                 },
                 {
-                    id: 11, category: 'coffee', price: 'COP 5,000', img: 'ImgMenu/Capuccino.png',
+                    id: 11, category: 'coffee', price: 'COP 5,000', img: './ImgMenu/Capuccino.png',
                     es: { name: 'Cappuccino Tradicional', desc: 'Un shot de espresso perfectamente equilibrado con leche cremada y una gruesa capa de espuma sedosa.' },
                     en: { name: 'Traditional Cappuccino', desc: 'A rich espresso shot perfectly balanced with steamed whole milk and topped with a thick layer of silky foam.' }
                 },
                 {
-                    id: 101, category: 'drinks', price: 'COP 2,500 - 3,500', img: 'ImgMenu/CocaCola.png',
+                    id: 101, category: 'drinks', price: 'COP 2,500 - 3,500', img: './ImgMenu/CocaCola.png',
                     es: { name: 'Coca-Cola', desc: 'Clásica gaseosa Coca-Cola. Disponible en presentación pequeña (250ml) y grande (400ml).' },
                     en: { name: 'Coca-Cola', desc: 'Classic Coca-Cola soft drink. Available in small (250ml) and large (400ml) sizes.' }
                 },
                 {
-                    id: 104, category: 'drinks', price: 'COP 2,500 - 3,000', img: 'ImgMenu/Colombiana.png',
+                    id: 104, category: 'drinks', price: 'COP 2,500 - 3,000', img: './ImgMenu/Colombiana.png',
                     es: { name: 'Colombiana', desc: 'Nuestra tradicional gaseosa Colombiana. Disponible en presentación pequeña (250ml) y grande (400ml).' },
                     en: { name: 'Colombiana', desc: 'Traditional Colombiana soft drink. Available in small (250ml) and large (400ml) sizes.' }
                 },
                 {
-                    id: 102, category: 'drinks', price: 'COP 3,500', img: 'ImgMenu/Sprite.png',
+                    id: 102, category: 'drinks', price: 'COP 3,500', img: './ImgMenu/Sprite.png',
                     es: { name: 'Sprite', desc: 'Gaseosa Sprite refrescante. Presentación de 400ml.' },
                     en: { name: 'Sprite', desc: 'Refreshing Sprite soft drink. 400ml size.' }
                 },
                 {
-                    id: 103, category: 'drinks', price: 'COP 3,500', img: 'ImgMenu/Pepsi.png',
+                    id: 103, category: 'drinks', price: 'COP 3,500', img: './ImgMenu/Pepsi.png',
                     es: { name: 'Pepsi', desc: 'Gaseosa Pepsi. Presentación de 400ml.' },
                     en: { name: 'Pepsi', desc: 'Pepsi soft drink. 400ml size.' }
                 },
                 {
-                    id: 105, category: 'drinks', price: 'COP 3,000', img: 'ImgMenu/Manzana.png',
+                    id: 105, category: 'drinks', price: 'COP 3,000', img: './ImgMenu/Manzana.png',
                     es: { name: 'Manzana Postobón', desc: 'Gaseosa sabor a Manzana. Presentación de 400ml.' },
                     en: { name: 'Apple Soda', desc: 'Apple flavored soft drink. 400ml size.' }
                 },
                 {
-                    id: 106, category: 'drinks', price: 'COP 3,000', img: 'ImgMenu/Naranja.png',
+                    id: 106, category: 'drinks', price: 'COP 3,000', img: './ImgMenu/Naranja.png',
                     es: { name: 'Naranja Postobón', desc: 'Gaseosa sabor a Naranja. Presentación de 400ml.' },
                     en: { name: 'Orange Soda', desc: 'Orange flavored soft drink. 400ml size.' }
                 },
                 {
-                    id: 109, category: 'drinks', price: 'COP 3,500', img: 'ImgMenu/PonyMalta.png',
+                    id: 109, category: 'drinks', price: 'COP 3,500', img: './ImgMenu/PonyMalta.png',
                     es: { name: 'Pony Malta', desc: 'Bebida de malta tradicional. Presentación de 330ml.' },
                     en: { name: 'Pony Malta', desc: 'Traditional malt beverage. 330ml size.' }
                 },
                 {
-                    id: 110, category: 'drinks', price: 'COP 2,500', img: 'ImgMenu/JugosHit.png',
+                    id: 110, category: 'drinks', price: 'COP 2,500', img: './ImgMenu/JugosHit.png',
                     es: { name: 'Jugo de Frutas', desc: 'Jugos marca Hit en caja. Por favor pregunta a nuestro equipo por los sabores disponibles hoy.' },
                     en: { name: 'Fruit Juice', desc: 'Hit brand juice boxes. Please ask our staff for available flavors today.' }
                 },
-                 {
-                    id: 111, category: 'drinks', price: 'COP 3,500', img: 'ImgMenu/JugosNectar.png',
+                {
+                    id: 111, category: 'drinks', price: 'COP 2,500', img: './ImgMenu/JugosNectar.png',
                     es: { name: 'Jugo de Frutas', desc: 'Jugos Nectar California en caja. Por favor pregunta a nuestro equipo por los sabores disponibles hoy.' },
                     en: { name: 'Fruit Juice', desc: 'Nectar California brand juice boxes. Please ask our staff for available flavors today.' }
                 },
                 {
-                    id: 112, category: 'drinks', price: 'COP 3,000 - 3,500', img: 'ImgMenu/AguaSinGas.png',
-                    es: { name: 'Agua Mineral', desc: 'Agua mineral (600ml). (COP 3,000).' },
-                    en: { name: 'Mineral Water', desc: 'Still Mineral water (600ml). Available  (COP 3,000).' }
+                    id: 112, category: 'drinks', price: 'COP 3,000 - 3,500', img: './ImgMenu/AguaSinGas.png',
+                    es: { name: 'Agua Mineral', desc: 'Agua mineral (600ml). (COP 3,000) o Con Gas (COP 3,500).' },
+                    en: { name: 'Mineral Water', desc: 'Mineral water (600ml). Available Still (COP 3,000) or Sparkling (COP 3,500).' }
                 },
                 {
-                    id: 113, category: 'drinks', price: 'COP 3,000 - 3,500', img: 'ImgMenu/AguaConGas.png',
-                    es: { name: 'Agua con Gas', desc: 'Agua mineral con gas (600ml).(COP 3,500).' },
-                    en: { name: 'Mineral Water', desc: 'Sparkling Mineral water (600ml). (COP 3,500).' }
+                    id: 113, category: 'drinks', price: 'COP 3,000 - 3,500', img: './ImgMenu/AguaConGas.png',
+                    es: { name: 'Agua con Gas', desc: 'Agua mineral con gas (600ml).(COP 3,000) o Con Gas (COP 3,500).' },
+                    en: { name: 'Mineral Water', desc: 'Mineral water (600ml). Available Still (COP 3,000) or Sparkling (COP 3,500).' }
                 },
                 {
-                    id: 114, category: 'drinks', price: 'COP 5,500', img: 'ImgMenu/ClubColombiaDorada.png',
+                    id: 114, category: 'drinks', price: 'COP 5,500', img: './ImgMenu/ClubColombiaDorada.png',
                     es: { name: 'Club Colombia Dorada', desc: 'Cerveza tipo Lager premium de malta seleccionada con un aroma y sabor balanceado de herencia alemana.' },
                     en: { name: 'Club Colombia Gold', desc: 'Premium lager beer brewed with selected malts, offering a balanced aroma and flavor of German heritage.' }
                 },
                 {
-                    id: 115, category: 'drinks', price: 'COP 5,500', img: 'ImgMenu/ClubColombiaRoja.png',
+                    id: 115, category: 'drinks', price: 'COP 5,500', img: './ImgMenu/ClubColombiaRoja.png',
                     es: { name: 'Club Colombia Roja', desc: 'Cerveza premium tipo Amber Lager, de tono rojizo cobrizo con notas de malta acaramelada tostada.' },
                     en: { name: 'Club Colombia Red', desc: 'Premium Amber Lager beer, with coppery red tones and caramelized toasted malt notes.' }
                 },
                 {
-                    id: 118, category: 'drinks', price: 'COP 5,500', img: 'ImgMenu/ClubColombiatrigo.png',
+                    id: 118, category: 'drinks', price: 'COP 5,500', img: './ImgMenu/ClubColombiaTrigo.png',
                     es: { name: 'Club Colombia Trigo', desc: 'Cerveza premium de trigo, sumamente refrescante con suaves notas frutales y un cuerpo sedoso.' },
                     en: { name: 'Club Colombia Wheat', desc: 'Premium wheat beer, highly refreshing with soft fruity notes and a silky body.' }
                 },
                 {
-                    id: 119, category: 'drinks', price: 'COP 4,000', img: 'ImgMenu/Aguila.png',
+                    id: 119, category: 'drinks', price: 'COP 4,000', img: './ImgMenu/Aguila.png',
                     es: { name: 'Cerveza Águila', desc: 'Clásica cerveza nacional AGuíla en lata.' },
                     en: { name: 'Águila Beer', desc: 'Classic national canned beer.' }
                 },
-                 {
-                    id: 120, category: 'drinks', price: 'COP 4,000', img: 'ImgMenu/Poker.png',
+                {
+                    id: 120, category: 'drinks', price: 'COP 4,000', img: './ImgMenu/Poker.png',
                     es: { name: 'Cerveza Poker', desc: 'Clásica cerveza nacional Poker en lata.' },
                     en: { name: 'Poker Beer', desc: 'Classic national canned beer.' }
                 },
                 {
-                    id: 116, category: 'drinks', price: 'COP 4,000', img: 'ImgMenu/ColaYPola.png',
+                    id: 116, category: 'drinks', price: 'COP 4,000', img: './ImgMenu/ColayPola.png',
                     es: { name: 'Refajo Kola y Pola', desc: 'Refrescante mezcla tradicional en lata. Disponible en versión Tradicional o Roja.' },
                     en: { name: 'Kola y Pola Refajo', desc: 'Refreshing traditional mix in can. Available in Traditional or Red version.' }
                 }
             ],
             ui: {
                 es: {
-                    tagline: "El origen de tu inspiración.", 
+                    tagline: "El origen de tu inspiración.",
                     heroDesc: "Café de especialidad, comida artesanal y espacios diseñados para crear, conectar y disfrutar.",
                     btnMenu: "Ver el Menú", btnCoworking: "Coworking", btnLocation: "Ubicación",
                     menuTitle: "Menú", cwTitle: "Zona de Estudio y Trabajo", cwDesc: "Hemos creado un ambiente cómodo para trabajar en tus proyectos, asistir a clases, o simplemente disfrutar de un momento de concentración.",
@@ -716,7 +902,7 @@
                     txtEyebrow: "Explora Raíces", txtSubMenu: "Nuestra Carta", txtSubCw: "Zonas de estudio", txtSubLoc: "Cómo llegar", txtSubContact: "Atención"
                 },
                 en: {
-                    tagline: "The origin of your inspiration.", 
+                    tagline: "The origin of your inspiration.",
                     heroDesc: "Specialty coffee, artisan food, and spaces designed to create, connect, and enjoy.",
                     btnMenu: "View Menu", btnCoworking: "Coworking", btnLocation: "Location",
                     menuTitle: "Menu", cwTitle: "Study & Work Zone", cwDesc: "We have created a comfortable environment where you can work on your projects, attend classes, or simply enjoy a moment of focus.",
@@ -742,7 +928,7 @@
         function safeUpdate(id, text, isHTML = false) {
             const el = document.getElementById(id);
             if (el) {
-                if (isHTML) el.innerHTML = text; 
+                if (isHTML) el.innerHTML = text;
                 else el.textContent = text;
             }
         }
@@ -753,7 +939,7 @@
             document.getElementById('btn-lang-en').className = lang === 'en' ? 'text-sm font-bold text-brand-terracotta px-2 transition-colors' : 'text-sm font-medium text-brand-charcoal/50 px-2 transition-colors';
 
             const ui = menuData.ui[lang];
-            
+
             // Home updates
             safeUpdate('txt-home-tagline', ui.tagline);
             safeUpdate('desktop-welcome', lang === 'es' ? 'Bienvenido' : 'Welcome');
@@ -761,7 +947,7 @@
             safeUpdate('txt-desktop-socials', ui.desktopSocials);
             safeUpdate('txt-home-eyebrow', ui.txtEyebrow);
             safeUpdate('txt-home-desc', lang === 'es' ? 'Selecciona una opción para comenzar tu experiencia.' : 'Select an option to begin your experience.');
-            
+
             // Bento Box text updates
             safeUpdate('txt-btn-menu', ui.btnMenu);
             safeUpdate('txt-sub-menu', ui.txtSubMenu);
@@ -769,7 +955,7 @@
             safeUpdate('txt-sub-cw', ui.txtSubCw);
             safeUpdate('txt-btn-location', ui.btnLocation);
             safeUpdate('txt-sub-loc', ui.txtSubLoc);
-            safeUpdate('txt-btn-contact', ui.contactLabelInner); 
+            safeUpdate('txt-btn-contact', ui.contactLabelInner);
             safeUpdate('txt-sub-contact', ui.txtSubContact);
 
             // Other views
@@ -784,7 +970,7 @@
 
             safeUpdate('loc-title', ui.locTitle);
             safeUpdate('loc-address-label', ui.locAddressLabel);
-            safeUpdate('loc-address', ui.locAddress, true); 
+            safeUpdate('loc-address', ui.locAddress, true);
             safeUpdate('loc-map-btn', ui.locMapBtn); safeUpdate('loc-waze-btn', ui.locWazeBtn);
 
             safeUpdate('contact-title', ui.contactTitle);
@@ -802,7 +988,7 @@
 
         function renderCategories() {
             const container = document.getElementById('category-tabs');
-            container.innerHTML = ''; 
+            container.innerHTML = '';
 
             menuData.categories.forEach(cat => {
                 const isActive = cat.id === currentCategory;
